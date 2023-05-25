@@ -1,5 +1,5 @@
 class Teacher < User
-  def teach
+  def teach(knowledge)
     knowledge.sample
   end
 end
@@ -28,7 +28,7 @@ describe Teacher do
 
   describe "#teach" do 
     it "returns a random string of knowledge" do 
-      expect(knowledge).to include(teacher.teach) 
+      expect(knowledge).to include(teacher.teach(knowledge)) 
     end
   end
 end
